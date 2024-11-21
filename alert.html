@@ -1,0 +1,52 @@
+<!-- Énoncé
+
+    Créez une page HTML contenant :
+        Un champ texte pour que l'utilisateur entre un message.
+        Un bouton pour afficher une alerte avec le message saisi.
+        Un deuxième bouton pour afficher une alerte préconfigurée.
+        Une zone pour afficher un message d'alerte dans la page elle-même (sans utiliser alert).
+
+    Utilisez JavaScript pour :
+        Afficher une alerte (alert) contenant le texte saisi lorsque le premier bouton est cliqué.
+        Afficher une alerte avec un message fixe lorsque le deuxième bouton est cliqué.
+        Afficher le message saisi directement dans la zone d'alerte intégrée (en HTML) avec un style distinct.
+
+    Bonus : Ajoutez un bouton pour réinitialiser le champ texte et la zone d'alerte intégrée. -->
+
+<!--     Consignes
+
+    Utilisez uniquement JavaScript pour gérer les événements.
+    La zone d'alerte intégrée doit avoir une bordure colorée et un style distinct (par exemple, un fond jaune).
+    Assurez-vous que les messages saisis par l'utilisateur sont valides :
+        Si le champ est vide, affichez une erreur (par exemple : "Veuillez entrer un message !"). -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+    <input type="button" value="alert" id="myButton" />
+
+    <input type="button" value="alerte preconfig" id="buton2" />
+
+    <!-- <a href="javascript:alert('Coucou');"> Cliquez ici </a> -->
+
+    <script>
+      const bouton = document.getElementById("myButton");
+      bouton.addEventListener("click", function () {
+        alert("alert");
+        bouton.style.backgroundColor = "blue";
+        bouton.style.color = "white";
+        bouton.style.border = "2px solid black";
+      });
+
+      const bouton2 = document.getElementById("buton2");
+      bouton2.addEventListener("click", function () {
+        alert("boum!!!!");
+      });
+    </script>
+  </body>
+</html>
